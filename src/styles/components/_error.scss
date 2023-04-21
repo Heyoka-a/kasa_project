@@ -1,0 +1,35 @@
+.error-container {
+  width: 100%;
+  margin: 100px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 133px;
+  color: $primary;
+
+  & img {
+    width: 198px;
+    height: 99px;
+  }
+
+  & h1 {
+    width: 260px;
+    height: 52px;
+    font-size: 18px;
+    font-family: $primary-font;
+  }
+}
+
+.contain-error-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.back-home-btn > a {
+  color: $primary;
+  font-size: 14px;
+}
