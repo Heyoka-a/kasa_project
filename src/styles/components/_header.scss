@@ -4,6 +4,11 @@ header {
   align-items: center;
   gap: 20px;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #ffffff;
 }
 
 .nav-contain {
@@ -41,10 +46,6 @@ nav {
   }
 }
 
-.test {
-  width: 100%;
-  margin: 0 20px 0 20px;
-}
 .section-header {
   background: url("/assets/HeaderImg.jpg");
   background-position: center;

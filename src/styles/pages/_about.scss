@@ -1,5 +1,7 @@
 .about-page-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   & img {
     margin: 0 20px;
     height: 223px;
@@ -13,6 +15,7 @@
   flex-direction: column;
   background-color: $primary;
   border-radius: 5px;
+  cursor: pointer;
 
   & p {
     margin: 0;
@@ -26,7 +29,7 @@
 }
 
 .contain-dropdown-elements {
-  margin: 4px;
+  margin: 8px;
   height: 30px;
   display: flex;
   justify-content: space-between;

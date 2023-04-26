@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
@@ -8,16 +8,28 @@ import Home from "../src/Pages/Home/index";
 import About from "./Pages/About/index";
 import Error from "./Components/Error/index";
 import Flat from "./Pages/Flat/index";
+import Footer from "./Components/Footer/index";
+import handleMainMinHeight from "./Components/Footer/handleMainMinHeight";
 
-ReactDOM.render(
-  <BrowserRouter>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/flat/:getFlatId" element={<Flat />} />
-      <Route path="*" element={<Error />} />
-    </Routes>
-  </BrowserRouter>,
-  document.getElementById("root")
-);
+function Init() {
+  useEffect(() => {
+    handleMainMinHeight();
+    window.addEventListener("resize", handleMainMinHeight);
+  }, []);
+  return (
+    <BrowserRouter>
+      <Header />
+      <main id="main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/flat/:getFlatId" element={<Flat />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </main>
+      <Footer />
+    </BrowserRouter>
+  );
+}
+
+ReactDOM.render(<Init />, document.getElementById("root"));
