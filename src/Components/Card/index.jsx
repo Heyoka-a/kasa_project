@@ -1,34 +1,34 @@
 import { Link } from "react-router-dom";
+import flatData from "../../datas/Flat";
+import { useEffect, useState } from "react";
 
-const flatList = [
-  {
-    id: "876567",
-    title: "apprt paname",
-    cover: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-  },
-  {
-    id: "876567",
-    title: "apprt paname",
-    cover: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-  },
-  {
-    id: "876567",
-    title: "apprt paname",
-    cover: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-  },
-  {
-    id: "876567",
-    title: "apprt paname",
-    cover: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-  },
-]
+function Card({ title, cover }) {
+  const [flatId, setFlatId] = useState("");
 
-function Card() {
+  useEffect(() => {
+    setFlatId(
+      flatData.find((item) => {
+        if (item.title === title) {
+          return true;
+        }
+        return false;
+      }).id || ""
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
-    {flatList.map((appart, index) => (
-      <div className="card" key={`${title.title}-${flatList.id}`}>
-        <img src={appart.cover} alt="appart à paname" />
-      </div>
-    ))}
-  )
+    <div className="card">
+      <Link to={`/flat/${flatId}`}>
+        <div className="card-cover">
+          <span>
+            <img src={cover} alt="correspond à l'appartement" />
+          </span>
+        </div>
+        <div className="card-title">{title}</div>
+      </Link>
+    </div>
+  );
 }
+
+export default Card;

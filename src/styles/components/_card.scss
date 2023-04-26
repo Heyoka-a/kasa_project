@@ -1,0 +1,50 @@
+.card {
+  margin: 20px 20px 0px 20px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+
+  & span {
+    display: block;
+    position: relative;
+    width: auto;
+    height: 100%;
+  }
+
+  & span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+.card:nth-child(1) {
+  margin: 22px 20px 0px 20px;
+}
+
+.card-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  & img {
+    width: 335px;
+    height: 225px;
+  }
+}
+
+.card-title {
+  position: absolute;
+  left: 4%;
+  bottom: 4%;
+  color: whitesmoke;
+}

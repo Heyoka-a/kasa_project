@@ -2,7 +2,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 65px;
+  gap: 20px;
   width: 100%;
 }
 
@@ -18,10 +18,13 @@ nav {
   align-items: center;
 }
 
-.left-element,
-img {
+.left-element {
   width: 145px;
   height: 47px;
+  & img {
+    width: 145px;
+    height: 47px;
+  }
 }
 
 .right-element {
@@ -63,4 +66,8 @@ img {
     font-weight: 500;
     font-family: $primary-font;
   }
+}
+
+.btn-test.active {
+  text-decoration: underline;
 }
