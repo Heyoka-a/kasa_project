@@ -1,4 +1,6 @@
 @import "bases/variables.scss";
 @import "components/header.scss", "components/error.scss", "components/card",
-  "components/footer";
-@import "pages/home", "pages/about";
+  "components/footer", "components/dropdown", "components/body",
+  "components/caroussel", "components/flatBody";
+
+@import "pages/about";

@@ -44,6 +44,9 @@ nav {
     color: $primary;
     font-size: 12px;
   }
+  .active-link {
+    text-decoration: underline;
+  }
 }
 
 .section-header {
@@ -67,8 +70,4 @@ nav {
     font-weight: 500;
     font-family: $primary-font;
   }
-}
-
-.btn-test.active {
-  text-decoration: underline;
 }
