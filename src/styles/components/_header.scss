@@ -21,6 +21,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include responsive(d) {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .left-element {
@@ -40,12 +45,19 @@ nav {
 
   & a {
     text-decoration: none;
-    font-size: $primary-font;
+    font-family: $primary-font;
     color: $primary;
     font-size: 12px;
+    @include responsive(d) {
+      font-size: 18px;
+    }
   }
   .active-link {
     text-decoration: underline;
+  }
+
+  @include responsive(d) {
+    width: 15%;
   }
 }
 
@@ -63,11 +75,23 @@ nav {
 
   & h1 {
     margin: 0 0 0 10px;
-    max-width: 220px;
+    width: 220px;
     color: white;
     font-size: 24px;
     line-height: 24px;
     font-weight: 500;
     font-family: $primary-font;
+
+    @include responsive(d) {
+      width: 100%;
+      font-size: 48px;
+      text-align: center;
+    }
+  }
+
+  @include responsive(d) {
+    max-width: 1150px;
+    margin: auto;
+    height: 223px;
   }
 }

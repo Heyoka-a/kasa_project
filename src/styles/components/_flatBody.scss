@@ -3,26 +3,45 @@
   font-family: $primary-font;
   h1 {
     font-size: 18px;
+    @include responsive(d) {
+      font-size: 36px;
+      margin-bottom: 4px;
+    }
   }
   h3 {
     font-size: 14px;
     margin: 0;
+    @include responsive(d) {
+      font-size: 18px;
+    }
   }
+}
+
+.flat-body-container {
+  position: relative;
 }
 
 .tags {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 8px 0;
   p {
     background-color: $primary;
-    padding: 6px 28px;
+    padding: 4px 18px;
+    margin: 0;
     border-radius: 5px;
     color: #ffffff;
     font-size: 10px;
     font-family: $primary-font;
     font-weight: 500;
+    @include responsive(d) {
+      font-size: 14px;
+      padding: 4px 24px;
+      border-radius: 10px;
+    }
   }
 }
 
@@ -35,7 +54,10 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    p {
+    .name {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
       font-size: 12px;
       color: $primary;
       font-weight: 500;
@@ -43,7 +65,24 @@
     img {
       width: 54px;
       border-radius: 50%;
+      @include responsive(d) {
+        width: 64px;
+      }
     }
+  }
+  @include responsive(d) {
+    flex-direction: column-reverse;
+    align-items: end;
+    gap: 15px;
+    position: absolute;
+    right: 0;
+    top: 4%;
+  }
+}
+
+.name > span {
+  @include responsive(d) {
+    font-size: 18px;
   }
 }
 
@@ -55,6 +94,9 @@
 .rating-fill,
 .rating-empty {
   width: 18px;
+  @include responsive(d) {
+    width: 24px;
+  }
 }
 
 .rating-fill {
@@ -62,5 +104,5 @@
 }
 
 .rating-empty {
-  fill: grey;
+  fill: #e3e3e3;
 }

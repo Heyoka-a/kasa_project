@@ -1,5 +1,11 @@
+.dropdown-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 100px;
+}
+
 .dropdown {
-  margin: 20px;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   background-color: $primary;
@@ -14,11 +20,14 @@
     width: 16px;
     fill: #ffffff;
   }
+
+  @include responsive(d) {
+    padding: 8px 0;
+  }
 }
 
 .contain-dropdown-elements {
   margin: 8px;
-  height: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,15 +36,19 @@
 
 .dropdown-open {
   & .hidden-dropdown-element {
-    height: 143px;
+    height: 100%;
+    padding: 8px 8px 12px 8px;
   }
 }
 
 .text-in-dropdown {
-  margin: 12px 8px 0 8px;
   font-size: 12px;
   font-family: $primary-font;
   color: $primary;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 }
 
 .hidden-dropdown-element {

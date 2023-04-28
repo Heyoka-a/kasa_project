@@ -11,6 +11,10 @@
   & img {
     width: 198px;
     height: 99px;
+    @include responsive(d) {
+      width: 597px;
+      height: 263px;
+    }
   }
 
   & h1 {

@@ -25,7 +25,11 @@ function FlatBody({ title, location, tags, host, rating }) {
           ))}
         </div>
         <div className="host">
-          <p>{host.name}</p>
+          <div className="name">
+            {host.name.split(" ").map((element) => (
+              <span>{element}</span>
+            ))}
+          </div>
           <img src={host.picture} alt={`avatar de ${host.name}`} />
         </div>
       </div>

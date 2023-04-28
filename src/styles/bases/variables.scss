@@ -8,3 +8,17 @@ $card-color: linear-gradient(
 );
 $primary-font: "Montserrat";
 $header-color: "rgba(0, 0, 0, 0.23)";
+
+// breakpoints
+$breakpoints: (
+  s-xs: 375px,
+  s: 480px,
+  s-xl: 576px,
+  t-xs: 768px,
+  t-s: 800px,
+  t: 992px,
+  t-xl: 1024px,
+  d-xs: 1200px,
+  d: 1440px,
+  d-xl: 1920px,
+);
