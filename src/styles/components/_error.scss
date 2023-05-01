@@ -22,6 +22,11 @@
     height: 52px;
     font-size: 18px;
     font-family: $primary-font;
+
+    @include responsive(d) {
+      width: 100%;
+      font-size: 36px;
+    }
   }
 }
 
@@ -36,4 +41,7 @@
 .back-home-btn > a {
   color: $primary;
   font-size: 14px;
+  @include responsive(d) {
+    font-size: 18px;
+  }
 }

@@ -7,10 +7,6 @@ function Flat() {
   const location = useParams();
   const itemData = flatData.find((data) => location.getFlatId === data.id);
 
-  // useEffect(() => {
-  //   setItemData();
-  // }, []);
-
   return (
     <>
       <div className="slider-container">
@@ -26,17 +22,21 @@ function Flat() {
         />
       </div>
       <div className="dropdown-container">
-        <Dropdown title={<p>Description</p>} text={itemData.description} />
-        <Dropdown
-          title={<p>Equipements</p>}
-          text={
-            <ul>
-              {itemData.equipments.map((el) => (
-                <li>{el}</li>
-              ))}
-            </ul>
-          }
-        />
+        <div className="dropdown-zeubi">
+          <Dropdown title={<p>Description</p>} text={itemData.description} />
+        </div>
+        <div className="dropdown-zeubi">
+          <Dropdown
+            title={<p>Equipements</p>}
+            text={
+              <ul>
+                {itemData.equipments.map((el) => (
+                  <li>{el}</li>
+                ))}
+              </ul>
+            }
+          />
+        </div>
       </div>
     </>
   );

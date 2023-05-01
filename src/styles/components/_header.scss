@@ -21,11 +21,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @include responsive(d) {
-    width: 80%;
-    margin: auto;
-  }
 }
 
 .left-element {
@@ -55,10 +50,6 @@ nav {
   .active-link {
     text-decoration: underline;
   }
-
-  @include responsive(d) {
-    width: 15%;
-  }
 }
 
 .section-header {
@@ -81,17 +72,44 @@ nav {
     line-height: 24px;
     font-weight: 500;
     font-family: $primary-font;
-
-    @include responsive(d) {
-      width: 100%;
-      font-size: 48px;
-      text-align: center;
-    }
   }
+}
 
+// responsive Header 1440px
+
+nav {
+  @include responsive(d) {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.right-element {
+  @include responsive(d) {
+    width: 18%;
+  }
+}
+
+.section-header {
   @include responsive(d) {
     max-width: 1150px;
     margin: auto;
     height: 223px;
+  }
+}
+
+.section-header > h1 {
+  @include responsive(d) {
+    width: 100%;
+    font-size: 48px;
+    text-align: center;
+  }
+}
+
+// responsive Header 800px
+
+.right-element {
+  @include responsive(t-s) {
+    width: 24%;
   }
 }
