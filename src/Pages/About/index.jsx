@@ -6,7 +6,7 @@ function Contact() {
   return (
     <div className="about-page-container">
       <img src={aboutPageImg} alt="ceci décris une montagne" />
-      <div className="dropdown-container">
+      <div className="about-page-dropdown-container">
         {AboutDatas.map((element, index) => (
           <Dropdown
             key={`${element.title}-${index}`}

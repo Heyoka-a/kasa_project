@@ -31,6 +31,11 @@ function Caroussel({ pictures }) {
           <ChevronRight />
         </button>
       </div>
+      <div className="number-of-img">
+        <span>
+          {count + 1}/{pictures.length}
+        </span>
+      </div>
     </div>
   );
 }

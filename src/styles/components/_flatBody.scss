@@ -18,7 +18,11 @@
 }
 
 .flat-body-container {
-  position: relative;
+  @include responsive(d) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .tags {
@@ -74,13 +78,11 @@
     flex-direction: column-reverse;
     align-items: end;
     gap: 15px;
-    position: absolute;
-    right: 0;
-    top: 4%;
   }
 }
 
 .name > span {
+  text-align: end;
   @include responsive(d) {
     font-size: 18px;
   }
@@ -90,6 +92,10 @@
   display: flex;
   align-items: center;
   gap: 4px;
+
+  @include responsive(d) {
+    gap: 15px;
+  }
 }
 .rating-fill,
 .rating-empty {

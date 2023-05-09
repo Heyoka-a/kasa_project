@@ -26,6 +26,7 @@
     @include responsive(d) {
       width: 100%;
       font-size: 36px;
+      font-weight: lighter;
     }
   }
 }
@@ -36,6 +37,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  @include responsive(d) {
+    gap: 68px;
+  }
 }
 
 .back-home-btn > a {

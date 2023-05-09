@@ -5,7 +5,7 @@
   & img {
     height: 223px;
     border-radius: 10px;
-    object-fit: contain;
+    object-fit: cover;
 
     @include responsive(d) {
       width: 1150px;

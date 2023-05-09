@@ -21,7 +21,7 @@ function Init() {
       <Header />
       <main id="main">
         <Routes>
-          <Route path="*" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/flat/:getFlatId" element={<Flat />} />
           <Route path="*" element={<Error />} />

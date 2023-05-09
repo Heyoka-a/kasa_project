@@ -44,3 +44,23 @@
 button:nth-child(1) {
   transform: rotate(180deg);
 }
+
+.number-of-img {
+  display: none;
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(50%);
+  color: #ffffff;
+  font-family: $primary-font;
+  font-weight: 500;
+}
+
+// responsive carrousel
+
+.number-of-img {
+  @include responsive(d) {
+    display: block;
+    font-size: 18px;
+  }
+}

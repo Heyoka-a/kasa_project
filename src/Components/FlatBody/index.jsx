@@ -8,11 +8,11 @@ function FlatBody({ title, location, tags, host, rating }) {
       <div className="contain-titles">
         <h1>{title}</h1>
         <h3>{location}</h3>
-      </div>
-      <div className="tags">
-        {tags.map((tag) => (
-          <p>{tag}</p>
-        ))}
+        <div className="tags">
+          {tags.map((tag) => (
+            <p>{tag}</p>
+          ))}
+        </div>
       </div>
       <div className="rating-name-avatar">
         <div className="star-container">
