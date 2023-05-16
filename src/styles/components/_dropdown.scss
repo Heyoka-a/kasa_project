@@ -62,6 +62,9 @@
     list-style: none;
     padding: 0;
   }
+  @include responsive(t-s) {
+    font-size: 14px;
+  }
 }
 
 .hidden-dropdown-element {

@@ -14,8 +14,7 @@ function Card({ title, cover }) {
         return false;
       }).id || ""
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [title]);
 
   return (
     <div className="card">
