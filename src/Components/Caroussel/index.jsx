@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ReactComponent as ChevronRight } from "../../assets/chevron-right-solid.svg";
+import { ReactComponent as ChevronRight } from "../../assets/chevron-right.svg";
 
 function Caroussel({ pictures }) {
   const [count, setCount] = useState(0);
@@ -25,10 +25,10 @@ function Caroussel({ pictures }) {
       <img src={pictures[count]} alt="" className="slider-img" />
       <div className="btn-container">
         <button onClick={btnSecond} className="button">
-          <ChevronRight />
+          <ChevronRight className="chevron-caroussel" />
         </button>
         <button onClick={btnPrimary} className="button">
-          <ChevronRight />
+          <ChevronRight className="chevron-caroussel" />
         </button>
       </div>
       <div className="number-of-img">

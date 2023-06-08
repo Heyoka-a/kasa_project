@@ -77,6 +77,12 @@ nav {
 
 // responsive Header 1440px
 
+header {
+  @include responsive(d) {
+    height: 100px;
+    justify-content: flex-end;
+  }
+}
 nav {
   @include responsive(d) {
     width: 80%;
@@ -93,7 +99,7 @@ nav {
 .section-header {
   @include responsive(d) {
     max-width: 1150px;
-    margin: auto;
+    margin: 63px auto 80px auto;
     height: 223px;
   }
 }

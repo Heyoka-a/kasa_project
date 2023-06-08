@@ -1,9 +1,14 @@
 .slider-container {
   width: 100%;
+  @include responsive(d) {
+    margin-top: 20px;
+  }
 }
 
 .slider {
   position: relative;
+  max-width: 1150px;
+  margin: auto;
 }
 .slider,
 .slider-img {
@@ -31,7 +36,7 @@
   button {
     cursor: pointer;
     margin: 0 8px;
-    width: 24px;
+    // width: 24px;
     fill: #ffffff;
     border: none;
     background-color: transparent;
@@ -62,5 +67,26 @@ button:nth-child(1) {
   @include responsive(d) {
     display: block;
     font-size: 18px;
+  }
+}
+
+.chevron-caroussel {
+  @include responsive(s-xs) {
+    width: 12px;
+    height: 20px;
+  }
+}
+
+.chevron-caroussel {
+  @include responsive(t-s) {
+    width: 18px;
+    height: 28px;
+  }
+}
+
+.chevron-caroussel {
+  @include responsive(d) {
+    width: 50px;
+    height: 80px;
   }
 }

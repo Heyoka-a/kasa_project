@@ -9,7 +9,9 @@ function Header() {
       <div className="nav-contain">
         <nav>
           <div className="left-element">
-            <img src={NavLogo} alt="présentation de kasa" />
+            <Link to="/">
+              <img src={NavLogo} alt="présentation de kasa" />
+            </Link>
           </div>
 
           <div className="right-element">
