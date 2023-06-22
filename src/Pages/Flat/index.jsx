@@ -36,15 +36,15 @@ function Flat() {
       </div>
       <div className="dropdown-container">
         <div className="wrap">
-          <Dropdown title={<p>Description</p>} text={itemData.description} />
+          <Dropdown title="Description" text={itemData.description} />
         </div>
         <div className="wrap">
           <Dropdown
-            title={<p>Equipements</p>}
+            title="Equipements"
             text={
               <ul>
                 {itemData.equipments.map((el) => (
-                  <li>{el}</li>
+                  <li key={el}>{el}</li>
                 ))}
               </ul>
             }

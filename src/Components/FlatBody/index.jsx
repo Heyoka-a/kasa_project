@@ -9,25 +9,26 @@ function FlatBody({ title, location, tags, host, rating }) {
         <h1>{title}</h1>
         <h3>{location}</h3>
         <div className="tags">
-          {tags.map((tag) => (
-            <p>{tag}</p>
+          {tags.map((tag, index) => (
+            <p key={`${tag}-${index}`}>{tag}</p>
           ))}
         </div>
       </div>
       <div className="rating-name-avatar">
         <div className="star-container">
-          {ratingArray.map((number) => (
+          {ratingArray.map((number, index) => (
             <RatingImg
               className={
                 Number(rating) >= number ? "rating-fill" : "rating-empty"
               }
+              key={`${number}-${index}`}
             />
           ))}
         </div>
         <div className="host">
           <div className="name">
-            {host.name.split(" ").map((element) => (
-              <span>{element}</span>
+            {host.name.split(" ").map((element, index) => (
+              <span key={`${element}-${index}`}>{element}</span>
             ))}
           </div>
           <img src={host.picture} alt={`avatar de ${host.name}`} />
