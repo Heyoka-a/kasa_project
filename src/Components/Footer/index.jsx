@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer id="footer">
       <FooterLogo />
-      <p>&copy; 2020 Kasa. All rights reserved</p>
+      <p>&copy; 2023 Kasa. All rights reserved</p>
     </footer>
   );
 }

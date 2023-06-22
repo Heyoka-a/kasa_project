@@ -18,3 +18,13 @@ main {
     margin: auto;
   }
 }
+h1,
+h2,
+h3,
+p,
+a,
+span,
+li {
+  font-weight: 500;
+  font-family: $primary-font;
+}

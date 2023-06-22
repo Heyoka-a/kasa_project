@@ -23,7 +23,6 @@
   & p {
     margin: 0;
     font-size: 13px;
-    font-family: $primary-font;
   }
   & .dropdown-img {
     width: 16px;
@@ -47,7 +46,7 @@
 .dropdown-open {
   & .hidden-dropdown-element {
     height: 100%;
-    padding: 8px 8px 12px 8px;
+    padding: 12px 18px 24px 18px;
   }
   & .dropdown-img {
     transform: rotate(-180deg);
@@ -56,7 +55,6 @@
 
 .text-in-dropdown {
   font-size: 12px;
-  font-family: $primary-font;
   color: $primary;
   ul {
     list-style: none;
