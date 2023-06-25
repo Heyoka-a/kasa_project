@@ -23,14 +23,16 @@ function Caroussel({ pictures }) {
   return (
     <div className="slider">
       <img src={pictures[count]} alt="" className="slider-img" />
-      <div className="btn-container">
-        <button onClick={btnSecond} className="button">
-          <ChevronRight className="chevron-caroussel" />
-        </button>
-        <button onClick={btnPrimary} className="button">
-          <ChevronRight className="chevron-caroussel" />
-        </button>
-      </div>
+      {pictures.length > 1 && (
+        <div className="btn-container">
+          <button onClick={btnSecond} className="button">
+            <ChevronRight className="chevron-caroussel" />
+          </button>
+          <button onClick={btnPrimary} className="button">
+            <ChevronRight className="chevron-caroussel" />
+          </button>
+        </div>
+      )}
       <div className="number-of-img">
         <span>
           {count + 1}/{pictures.length}

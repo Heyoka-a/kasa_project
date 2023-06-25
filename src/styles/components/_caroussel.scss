@@ -57,11 +57,7 @@ button:nth-child(1) {
   left: 50%;
   transform: translateX(50%);
   color: #ffffff;
-}
 
-// responsive carrousel
-
-.number-of-img {
   @include responsive(d) {
     display: block;
     font-size: 18px;
@@ -73,16 +69,12 @@ button:nth-child(1) {
     width: 12px;
     height: 20px;
   }
-}
 
-.chevron-caroussel {
   @include responsive(t-s) {
     width: 18px;
     height: 28px;
   }
-}
 
-.chevron-caroussel {
   @include responsive(d) {
     width: 50px;
     height: 80px;

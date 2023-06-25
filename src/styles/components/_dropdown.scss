@@ -63,6 +63,10 @@
   @include responsive(t-s) {
     font-size: 14px;
   }
+
+  @include responsive(d) {
+    font-size: 18px;
+  }
 }
 
 .hidden-dropdown-element {
@@ -75,10 +79,5 @@
   @include responsive(d) {
     margin: 4px 8px;
     font-size: 24px;
-  }
-}
-.text-in-dropdown {
-  @include responsive(d) {
-    font-size: 18px;
   }
 }

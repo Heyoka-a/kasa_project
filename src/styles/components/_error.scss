@@ -44,6 +44,7 @@
 .back-home-btn > a {
   color: $primary;
   font-size: 14px;
+
   @include responsive(d) {
     font-size: 18px;
   }

@@ -17,7 +17,7 @@ function Card({ title, cover }) {
   }, [title]);
 
   return (
-    <div className="card">
+    <article className="card">
       <Link to={`/flat/${flatId}`}>
         <div className="card-cover">
           <span>
@@ -26,7 +26,7 @@ function Card({ title, cover }) {
         </div>
         <div className="card-title">{title}</div>
       </Link>
-    </div>
+    </article>
   );
 }
 

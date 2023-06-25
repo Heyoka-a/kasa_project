@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import ErrorImg from "../../assets/404.svg";
 
 function Error() {
-  console.log("non");
   return (
     <div className="error-container">
       <div className="contain-error-img">

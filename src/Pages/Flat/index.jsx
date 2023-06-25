@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import FlatBody from "../../Components/FlatBody/index";
 import Dropdown from "../../Components/Dropdown";
 import { useEffect } from "react";
+
 function Flat() {
   const location = useParams();
   const itemData = flatData.find((data) => location.getFlatId === data.id);

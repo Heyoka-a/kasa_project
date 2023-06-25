@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Banner />
-      <div className="cards-container">
+      <section className="cards-container">
         {FlatData.map((appart, index) => (
           <Card
             key={`${appart.title}-${index}`}
@@ -14,7 +14,7 @@ function App() {
             cover={appart.cover}
           />
         ))}
-      </div>
+      </section>
     </>
   );
 }

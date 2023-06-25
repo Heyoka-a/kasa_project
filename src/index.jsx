@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./styles/main.scss";
 import Header from "./Components/Header";
 import Home from "../src/Pages/Home/index";
@@ -16,6 +15,7 @@ function Init() {
     handleMainMinHeight();
     window.addEventListener("resize", handleMainMinHeight);
   }, []);
+
   return (
     <BrowserRouter>
       <Header />
@@ -32,7 +32,6 @@ function Init() {
   );
 }
 
-// ReactDOM.render(<Init />, document.getElementById("root"));
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(<Init />);
